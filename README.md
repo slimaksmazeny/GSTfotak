@@ -1,4 +1,4 @@
-# Síťově ovládaný e-ink IoT fotoaparát
+# GSTfotak – síťově ovládaný e-ink IoT fotoaparát
 
 Absolventská práce · **Tomáš Paul (23A)** · SPŠ sdělovací techniky Praha 1 – Panská, obor GST
 Vedoucí práce: **Ing. Jakub Mikoláš** · školní rok 2026/27
@@ -9,7 +9,7 @@ nebo z mobilu přes Wi-Fi web (živý hledáček, galerie, stav baterie).
 
 ## 👉 Projektové centrum (web)
 Interaktivní přehled stavu, plánu, deníku, schémat, DPS, 3D šasi a softwaru:
-**https://slimaksmazeny.github.io/REPO/** (GitHub Pages ze souboru `index.html`)
+**https://slimaksmazeny.github.io/GSTfotak/** (GitHub Pages ze souboru `index.html`)
 
 ## Obsah repozitáře
 | Složka | Obsah |
