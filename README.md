@@ -11,6 +11,10 @@ nebo z mobilu přes Wi-Fi web (živý hledáček, galerie, stav baterie).
 Interaktivní přehled stavu, plánu, deníku, schémat, DPS, 3D šasi a softwaru:
 **https://slimaksmazeny.github.io/GSTfotak/** (GitHub Pages ze souboru `index.html`)
 
+## Pro vedoucího práce
+Na webu je hned úvodní stránka **Přehled pro vedoucího**: celkové % hotovo, postup po oblastech, harmonogram s dnešním datem, povinné výstupy a poslední záznamy deníku.
+Připomínky je možné psát přes **[Issues](https://github.com/slimaksmazeny/GSTfotak/issues/new)** a historie práce je v **[commitech](https://github.com/slimaksmazeny/GSTfotak/commits/main)**.
+
 ## Obsah repozitáře
 | Složka | Obsah |
 |---|---|
@@ -18,6 +22,8 @@ Interaktivní přehled stavu, plánu, deníku, schémat, DPS, 3D šasi a softwar
 | `hardware/pcb/` | KiCad 8 projekt DPS v1.2 (schéma, layout, knihovna `reFrame_THT`), Gerbery, PDF výrobní dokumentace |
 | `hardware/3d/` | STL díly šasi k tisku (otvor pro 16mm tlačítko), zkušební kupon, skript úpravy, návod k tisku |
 | `software/` | kostra vlastního softwaru (FastAPI, Picamera2, dithering, e-ink, LED, PiSugar), systemd, síť |
+| `data/stav.json` | stav úkolů – z něj web počítá % postupu (upravuje se bez zásahu do HTML) |
+| `data/denik.json` | další záznamy deníku práce |
 | `prompts/`, `CLAUDE.md` | kontext a prompty pro AI asistenta |
 
 ## Stav (16. 11. 2026)

@@ -1,0 +1,313 @@
+{
+ "updated": "2026-11-16",
+ "tasks": [
+  [
+   "A",
+   "nov",
+   "done",
+   "Tomáš + Ing. Mikoláš",
+   "Zadání práce schváleno"
+  ],
+  [
+   "A",
+   "nov",
+   "done",
+   "Tomáš + Ing. Mikoláš",
+   "Harmonogram odsouhlasen"
+  ],
+  [
+   "A",
+   "nov",
+   "done",
+   "Tomáš",
+   "Výběr HW a předlohy (reFrame)"
+  ],
+  [
+   "A",
+   "nov",
+   "done",
+   "Claude",
+   "Projektové centrum + GitHub repozitář GSTfotak"
+  ],
+  [
+   "A",
+   "nov",
+   "wait",
+   "Ing. Mikoláš",
+   "Informovat vedoucího: DPS v1.2 beze změny, upravené připojení 2 vodičů"
+  ],
+  [
+   "B",
+   "nov",
+   "done",
+   "Tomáš",
+   "Schéma zapojení v KiCadu (Gemini asistence)"
+  ],
+  [
+   "B",
+   "nov",
+   "done",
+   "Tomáš",
+   "Layout DPS v1.2, DRC 0 chyb / 0 varování"
+  ],
+  [
+   "B",
+   "nov",
+   "done",
+   "Tomáš",
+   "Gerbery + vrtací soubory"
+  ],
+  [
+   "B",
+   "nov",
+   "done",
+   "Claude",
+   "Kontrola návrhu (audit) – 2 opravy zapojení"
+  ],
+  [
+   "B",
+   "nov",
+   "done",
+   "Tomáš + Claude",
+   "Rozhodnutí: DPS v1.2 zůstává"
+  ],
+  [
+   "B",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Výroba DPS (JLCPCB / škola)"
+  ],
+  [
+   "B",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Osazení a pájení DPS"
+  ],
+  [
+   "B",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Kontrola DPS multimetrem (zkraty, spoje)"
+  ],
+  [
+   "C",
+   "nov",
+   "done",
+   "Claude",
+   "Analýza 3D modelu reFrame (rozměry, dutina)"
+  ],
+  [
+   "C",
+   "nov",
+   "done",
+   "Claude",
+   "Otvor Ø16,2 mm + vybrání pod matici + zkušební kupon"
+  ],
+  [
+   "C",
+   "nov",
+   "wait",
+   "kamarád",
+   "3D tisk dílů (zip s návodem předán)"
+  ],
+  [
+   "C",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Test tlačítka s maticí v kuponu + změření posuvkou"
+  ],
+  [
+   "C",
+   "dec",
+   "todo",
+   "Claude",
+   "Doladění otvoru + držák DPS 32×26 mm"
+  ],
+  [
+   "C",
+   "dec",
+   "todo",
+   "kamarád",
+   "Tisk finálního šasi"
+  ],
+  [
+   "D",
+   "nov",
+   "wait",
+   "Tomáš",
+   "Objednávka LaskaKit (tlačítko, USB-C, kabel kamery, dráty, šrouby)"
+  ],
+  [
+   "D",
+   "nov",
+   "todo",
+   "Tomáš",
+   "microSD karta 16–32 GB"
+  ],
+  [
+   "E",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Test na stole: PiSugar + tlačítko (BAT) + LED na GPIO 13"
+  ],
+  [
+   "E",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Suchá montáž v šasi, fotky pro Clauda"
+  ],
+  [
+   "E",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Kompletace fotoaparátu"
+  ],
+  [
+   "E",
+   "dec",
+   "todo",
+   "Tomáš",
+   "První start + testovací skripty HW"
+  ],
+  [
+   "F",
+   "nov",
+   "done",
+   "Claude",
+   "Návrh architektury softwaru"
+  ],
+  [
+   "F",
+   "nov",
+   "done",
+   "Claude",
+   "Kostra kódu (kamera, dither, displej, LED, PiSugar, API)"
+  ],
+  [
+   "F",
+   "dec",
+   "todo",
+   "Tomáš",
+   "Instalace RPi OS Lite + SSH"
+  ],
+  [
+   "F",
+   "sw",
+   "todo",
+   "Tomáš + Claude",
+   "Kamera: AF, HDR, foto 12 MPx"
+  ],
+  [
+   "F",
+   "sw",
+   "todo",
+   "Tomáš + Claude",
+   "Zpracování obrazu a dithering"
+  ],
+  [
+   "F",
+   "sw",
+   "todo",
+   "Tomáš + Claude",
+   "E-ink displej + LED stavy"
+  ],
+  [
+   "F",
+   "sw",
+   "todo",
+   "Tomáš + Claude",
+   "REST API (FastAPI) + galerie"
+  ],
+  [
+   "G",
+   "nov",
+   "done",
+   "Claude",
+   "Klikací prototyp webového rozhraní"
+  ],
+  [
+   "G",
+   "sw",
+   "todo",
+   "Tomáš + Claude",
+   "MJPEG živý hledáček"
+  ],
+  [
+   "G",
+   "sw",
+   "todo",
+   "Tomáš + Claude",
+   "Finální web UI v mobilu"
+  ],
+  [
+   "G",
+   "sw",
+   "todo",
+   "Tomáš",
+   "systemd služba (automatický start)"
+  ],
+  [
+   "G",
+   "sw",
+   "todo",
+   "Tomáš",
+   "mDNS reframe.local + Wi-Fi hotspot fallback"
+  ],
+  [
+   "H",
+   "nov",
+   "done",
+   "Tomáš",
+   "PDF výrobní dokumentace DPS v1.2"
+  ],
+  [
+   "H",
+   "nov",
+   "wait",
+   "Tomáš + Claude",
+   "Oprava dokumentace podle auditu"
+  ],
+  [
+   "H",
+   "mar",
+   "todo",
+   "Tomáš",
+   "Fotodokumentace zařízení"
+  ],
+  [
+   "H",
+   "mar",
+   "todo",
+   "Tomáš",
+   "Návod k použití"
+  ],
+  [
+   "H",
+   "mar",
+   "todo",
+   "Tomáš",
+   "Text absolventské práce"
+  ],
+  [
+   "I",
+   "mar",
+   "todo",
+   "Tomáš",
+   "Prezentace k obhajobě"
+  ],
+  [
+   "I",
+   "mar",
+   "todo",
+   "Tomáš",
+   "Tištěný scénář + generálka"
+  ]
+ ]
+}

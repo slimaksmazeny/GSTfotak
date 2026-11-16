@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>reFrame IoT Camera – Projektové centrum | Tomáš Paul 23A</title>
+<title>GSTfotak – projektové centrum | e-ink IoT fotoaparát · Tomáš Paul 23A</title>
 <style>
 :root{--bg:#0b0f17;--bg2:#111827;--bg3:#1a2233;--line:#263045;--tx:#e5e7eb;--mut:#94a3b8;--acc:#34d399;--acc2:#22d3ee;
 --red:#f87171;--yel:#fbbf24;--blu:#60a5fa;--grn:#4ade80;--pur:#c084fc;--org:#fb923c;--mono:ui-monospace,"JetBrains Mono","Cascadia Code",Consolas,monospace}
@@ -73,6 +73,32 @@ input[type=range]{width:100%;accent-color:#34d399}select,input[type=text],textar
 .toast{position:fixed;right:18px;bottom:18px;background:#065f46;color:#fff;padding:10px 16px;border-radius:10px;display:none;z-index:99;font-size:13px}
 .legend span{display:inline-flex;align-items:center;gap:5px;margin-right:12px;font-size:12px}.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
 details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:8px 0}summary{cursor:pointer;font-weight:600}
+
+nav.side .ovr{padding:4px 10px 10px;border-bottom:1px solid var(--line);margin-bottom:6px}.ovr-l{font-size:11px;color:var(--mut)}.ovr-v{font:700 12px var(--mono);color:#a7f3d0;margin-top:3px}
+.bar{height:7px;background:#1f2937;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#34d399,#22d3ee);width:0;transition:width .6s}
+nav.side button{justify-content:space-between}nav.side button .nb{font:600 10.5px var(--mono);color:#6ee7b7;background:#0f2a22;border-radius:99px;padding:0 6px}
+nav.side .navfoot{padding:14px 10px;font-size:12.5px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:0 0 14px;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.crumb{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}.ttl{font-weight:700;font-size:15px}
+.hero{display:flex;gap:22px;align-items:center;flex-wrap:wrap;background:linear-gradient(135deg,#0f2a22,#0d1b2e);border:1px solid #1e3a34;border-radius:18px;padding:20px 22px}
+.ring{position:relative;width:130px;height:130px;flex:none}.ring svg{width:100%;height:100%}.ringv{position:absolute;inset:0;display:grid;place-content:center;text-align:center}.ringv b{font-size:30px}.ringv span{font-size:11px;color:var(--mut)}
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.area{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer}.area:hover{border-color:#2f6b57}
+.area .h{display:flex;justify-content:space-between;align-items:baseline}.area .h b{font-size:14px}.area .h span{font:700 15px var(--mono)}
+.area .bar{margin:8px 0 6px}.area .s{font-size:11.5px;color:var(--mut)}
+.gantt{display:grid;grid-template-columns:150px 1fr;gap:6px 10px;align-items:center;position:relative}
+.gantt .lab{font-size:13px}.gantt .track{position:relative;height:26px;background:#0b1220;border-radius:6px}
+.gantt .seg{position:absolute;top:0;bottom:0;border-radius:6px;background:#173a30;border:1px solid #1f5c49;overflow:hidden;display:flex;align-items:center;padding:0 8px;font:11px var(--mono);color:#d1fae5;white-space:nowrap}
+.gantt .seg i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#10b98155,#22d3ee55)}.gantt .seg span{position:relative}
+.gantt .today{position:absolute;top:-4px;bottom:-4px;width:2px;background:#f87171;box-shadow:0 0 6px #f87171}.gantt .months{display:flex;justify-content:space-between;font:11px var(--mono);color:var(--mut)}
+.links{display:grid;gap:6px}.links a{display:block;background:#0f1726;border:1px solid var(--line);border-radius:8px;padding:8px 10px;text-decoration:none;color:var(--tx);font-size:13.5px}.links a:hover{border-color:#2f6b57}
+ul.tight,ol.tight{margin:4px 0;padding-left:20px}ul.tight li,ol.tight li{margin:4px 0}
+.quote{border-left:3px solid #34d399;padding-left:12px;color:#cbd5e1;font-style:italic}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0}.flow div{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:8px 12px;text-align:center}.flow div span{display:block;font-size:11px;color:var(--mut)}.flow i{color:#34d399;font-style:normal;font-weight:700}
+.tk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:start;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:6px 0;font-size:13.5px}
+.tk .st{cursor:default;font-size:15px;line-height:1.2}.tk.ed .st{cursor:pointer}.tk .meta{font-size:11px;color:var(--mut);margin-top:2px}.tk.done .tt{color:#94a3b8;text-decoration:line-through}
+.areahead{display:flex;justify-content:space-between;align-items:center;margin:18px 0 4px}.areahead h3{margin:0}
+
 @media(max-width:900px){.app{display:block}nav.side{position:static;width:auto;height:auto;display:flex;flex-wrap:wrap;gap:4px}nav.side .grp,.brand{display:none}nav.side button{width:auto}main{padding:14px}}
 @media print{nav.side{display:none}section.tab{display:block!important;page-break-after:always}}
 </style>
@@ -80,61 +106,133 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <body>
 <div class="app">
 <nav class="side" id="nav">
-  <div class="brand"><div class="logo">rF</div><div><b>reFrame IoT Camera</b><small>Tomáš Paul · 23A · SPŠST Panská</small></div></div>
-  <div class="grp">Řízení projektu</div>
-  <button data-t="home" class="on">🏠 Přehled & stav</button>
-  <button data-t="audit">🔍 Kontrola návrhu (audit)</button>
-  <button data-t="plan">📅 Plán & harmonogram</button>
-  <button data-t="log">📝 Deník práce</button>
-  <div class="grp">Hardware</div>
-  <button data-t="parts">🧩 Součástky & BOM</button>
-  <button data-t="pcb">🟩 DPS v1.2 + schéma</button>
-  <button data-t="wiring">🔌 Zapojení & GPIO</button>
-  <button data-t="chassis">🧊 3D šasi (16,2 mm)</button>
-  <button data-t="assembly">🛠️ Návod na sestavení</button>
-  <div class="grp">Software</div>
-  <button data-t="software">🐍 Architektura & kód</button>
-  <button data-t="dashboard">📱 Web dashboard (prototyp)</button>
-  <div class="grp">Komunikace & zdroje</div>
-  <button data-t="prompts">🤖 Prompty pro Clauda</button>
-  <button data-t="sources">📚 Zdroje, autoři, nástroje</button>
+  <div class="brand"><div class="logo">GST</div><div><b>GSTfotak</b><small>e-ink IoT fotoaparát · T. Paul 23A</small></div></div>
+  <div class="ovr"><div class="ovr-l">Celkový postup</div><div class="bar"><i id="navBar"></i></div><div class="ovr-v" id="navPct">–</div></div>
+  <div class="grp">🎓 Pro učitele</div>
+  <button data-t="teacher" class="on">Přehled pro vedoucího</button>
+  <button data-t="tasks">Plán & všechny úkoly</button>
+  <div class="grp">💡 Projekt</div>
+  <button data-t="about">O projektu</button>
+  <button data-t="parts" data-a="D">Součástky & nákup</button>
+  <div class="grp">🔧 Hardware</div>
+  <button data-t="pcb" data-a="B">DPS & schéma</button>
+  <button data-t="wiring">Zapojení & GPIO</button>
+  <button data-t="chassis" data-a="C">3D šasi</button>
+  <button data-t="assembly" data-a="E">Návod na sestavení</button>
+  <div class="grp">💻 Software</div>
+  <button data-t="software" data-a="F">Architektura & kód</button>
+  <button data-t="dashboard" data-a="G">Web dashboard</button>
+  <div class="grp">👤 Vývoj – Tomáš</div>
+  <button data-t="me">Moje úkoly</button>
+  <button data-t="log">Deník práce</button>
+  <div class="grp">🤖 Vývoj – Claude</div>
+  <button data-t="claude">Úkoly & výstupy</button>
+  <button data-t="audit">Kontrola návrhu</button>
+  <button data-t="prompts">Prompty</button>
+  <div class="grp">📚 Ostatní</div>
+  <button data-t="sources">Zdroje, autoři, nástroje</button>
+  <div class="navfoot"><a href="https://github.com/slimaksmazeny/GSTfotak" target="_blank">GitHub repozitář ↗</a></div>
 </nav>
 <main>
+<div class="topbar"><div><div class="crumb" id="crumb">Pro učitele</div><div class="ttl" id="ttl">Přehled pro vedoucího</div></div>
+  <div class="row"><span class="small" id="upd"></span><a class="btn gh sm" href="https://github.com/slimaksmazeny/GSTfotak/issues/new" target="_blank">💬 Napsat připomínku</a><a class="btn sm" href="https://github.com/slimaksmazeny/GSTfotak" target="_blank">GitHub</a></div></div>
 
-<!-- ================= HOME ================= -->
-<section class="tab on" id="t-home">
-  <h1>Síťově ovládaný e-ink IoT fotoaparát</h1>
-  <p class="sub">Absolventská práce 2026/27 · obor GST · vedoucí <b>Ing. Jakub Mikoláš</b> · předloha <a href="https://github.com/kaloyaan/reframe" target="_blank">reFrame (Kaloyan Kolev)</a> · poslední aktualizace <b class="mono">16. 11. 2026</b></p>
-  <div class="grid g4">
-    <div class="kpi"><div class="l">Fáze</div><div class="v">Listopad</div><div class="small">příprava HW před prosincem</div></div>
-    <div class="kpi"><div class="l">DPS</div><div class="v" style="color:var(--grn)">v1.2 ✓</div><div class="small">DRC 0 chyb, Gerbery hotové</div></div>
-    <div class="kpi"><div class="l">Šasi</div><div class="v" style="color:var(--yel)">upraveno</div><div class="small">čeká na zkušební tisk</div></div>
-    <div class="kpi"><div class="l">Celkový postup</div><div class="v" id="kpiProg">–</div><div class="small">z úkolů v záložce Plán</div></div>
+<section class="tab on" id="t-teacher">
+  <div class="hero">
+    <div class="ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" stroke="#1f2937" stroke-width="12" fill="none"/><circle id="ringArc" cx="60" cy="60" r="50" stroke="url(#rg)" stroke-width="12" fill="none" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="314" stroke-dashoffset="314"/><defs><linearGradient id="rg"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs></svg><div class="ringv"><b id="ringPct">–</b><span>hotovo</span></div></div>
+    <div style="flex:1;min-width:260px">
+      <h1>Síťově ovládaný e-ink IoT fotoaparát</h1>
+      <p class="sub" style="margin-bottom:8px">Absolventská práce 2026/27 · <b>Tomáš Paul</b> (23A) · obor GST · vedoucí <b>Ing. Jakub Mikoláš</b></p>
+      <div class="row"><span class="pill info" id="phaseNow">fáze</span><span class="pill ok" id="cntDone"></span><span class="pill wait" id="cntWait"></span><span class="pill todo" id="cntTodo"></span></div>
+      <p style="margin:10px 0 0">Kompaktní fotoaparát a fotorámeček v jednom. Snímek z Camera Module 3 se převede do 6 barev a zobrazí na e-ink displeji, který obraz drží bez napájení. Ovládá se kovovým tlačítkem nebo mobilním webem přes Wi-Fi. Vlastní přínos: <b>THT deska plošných spojů</b>, upravené 3D šasi, vlastní backend, REST API a webové rozhraní.</p>
+    </div>
   </div>
 
-  <div class="alert r"><b class="t">⚠️ Rozhodnuto 16. 11.: DPS zůstává v1.2. Při zapojování dodrž 2 opravy drátů:</b>
-  1) <b>LED_CTRL nesmí jít na GPIO 17 (pin 11)</b> – ten používá displej Waveshare jako RST. Použij <b>GPIO 13 (pin 33)</b>.<br>
-  2) <b>Tlačítko PiSugaru se spíná proti BAT (+), ne proti GND.</b> Společný kontakt tlačítka (COM) proto připájej drátem na <b>pad 2 (BAT)</b> na PiSugaru, ne na J2.1. Detaily jsou v záložce <a href="#" onclick="go('audit');return false">Kontrola návrhu</a>.</div>
+  <h2>Postup podle oblastí</h2>
+  <div class="areas" id="areas"></div>
+
+  <h2>Harmonogram (odsouhlasený vedoucím)</h2>
+  <div class="card"><div class="gantt" id="gantt"></div><p class="small" style="margin:8px 0 0">Svislá čára = dnešní datum. Procenta u fází počítají úkoly přiřazené do dané fáze.</p></div>
 
   <div class="grid g2">
-    <div class="card"><h3 style="margin-top:0">O projektu</h3>
-      <p>Kompaktní fotoaparát a zároveň fotorámeček. Po stisku kovové spouště nebo z mobilního webu pořídí Camera Module 3 snímek 12 MPx s HDR. Python ho ořízne na 600×400 a ditheringem převede do 6 barev e-ink displeje Spectra 6. Překreslení trvá ~20 s a pak obraz drží bez napájení. Wi-Fi web na <code>http://reframe.local</code> nabízí živý hledáček, galerii, stav baterie a vzdálenou spoušť.</p>
-      <p class="small">Vlastní přidaná hodnota oproti reFrame: vlastní THT DPS (napájení + spoušť + LED), 16mm tlačítko s LED kroužkem, vlastní backend a webové rozhraní, hotspot fallback, dokumentace.</p></div>
-    <div class="card"><h3 style="margin-top:0">Rychlé odkazy</h3>
-      <div class="row">
-        <button class="btn gh" onclick="go('pcb')">DPS & schéma</button><button class="btn gh" onclick="go('wiring')">Tabulka drátů</button>
-        <button class="btn gh" onclick="go('chassis')">3D šasi</button><button class="btn gh" onclick="go('prompts')">Master prompt</button>
-        <button class="btn gh" onclick="go('dashboard')">Prototyp webu</button><button class="btn gh" onclick="go('log')">Přidat poznámku</button>
-      </div>
-      <h3>Co dál (nejbližší kroky)</h3>
-      <ol style="margin:0;padding-left:20px">
-        <li>Objednat z LaskaKitu podle <a href="#" onclick="go('parts');return false">nákupního seznamu</a> (tlačítko červené/žluté, USB-C, <b>kabel kamery pro Zero</b>, dráty, šrouby)</li>
-        <li>Vytisknout <b>zkušební kupon</b> stěny s otvorem 16,2 mm (~15 min) a vyzkoušet tlačítko s maticí</li>
-        <li>Nechat vyrobit DPS v1.2 (Gerbery hotové)</li>
-        <li>Suchá montáž bez pájení → změřit, kam se vejde DPS 32×26 mm</li>
-        <li>Na stole otestovat tlačítko a LED (BAT spínání, jas LED na 3,3 V)</li>
-      </ol></div>
+    <div class="card"><h3 style="margin-top:0">Povinné výstupy podle zadání</h3><table id="deliv"></table></div>
+    <div class="card"><h3 style="margin-top:0">Poslední záznamy z deníku</h3><div id="lastLog"></div><button class="btn sm gh" onclick="go('log')">Celý deník →</button></div>
   </div>
+  <div class="grid g2">
+    <div class="card"><h3 style="margin-top:0">Důležitá rozhodnutí</h3>
+      <ul class="tight"><li><b>DPS v1.2 zůstává beze změny</b> (DRC 0 chyb). Opravuje se jen připojení 2 vodičů: LED → GPIO 13, tlačítko COM → BAT na PiSugaru.</li>
+      <li><b>Tlačítko 16 mm</b> místo 12 mm (originál). Šasi upraveno na otvor Ø16,2 mm.</li>
+      <li><b>LED tlačítka</b> červená nebo žlutá (z 3,3 V GPIO svítí lépe). Při slabém jasu se R2 změní na 100 Ω.</li>
+      <li><b>Software</b> je vlastní architektura (FastAPI, Picamera2). Z reFrame se přebírá jen ovladač displeje.</li></ul></div>
+    <div class="card"><h3 style="margin-top:0">K nahlédnutí</h3>
+      <div class="links">
+        <a href="https://github.com/slimaksmazeny/GSTfotak/tree/main/hardware/pcb" target="_blank">🟩 KiCad projekt + Gerbery</a>
+        <a href="https://github.com/slimaksmazeny/GSTfotak/blob/main/hardware/pcb/vyrobni_dokumentace_DPS_v1.2.pdf" target="_blank">📄 Výrobní dokumentace DPS (PDF)</a>
+        <a href="https://github.com/slimaksmazeny/GSTfotak/tree/main/hardware/3d" target="_blank">🧊 3D modely šasi (STL)</a>
+        <a href="https://github.com/slimaksmazeny/GSTfotak/tree/main/software" target="_blank">🐍 Zdrojový kód</a>
+        <a href="https://github.com/slimaksmazeny/GSTfotak/commits/main" target="_blank">🕓 Historie změn (commity)</a>
+        <a href="https://github.com/slimaksmazeny/GSTfotak/issues/new" target="_blank">💬 Připomínka pro studenta (GitHub Issue)</a>
+      </div></div>
+  </div>
+</section>
+
+<section class="tab" id="t-about">
+  <h1>O projektu</h1>
+  <div class="grid g2">
+    <div class="card"><h3 style="margin-top:0">Zadání</h3><p class="quote">„Student realizuje funkční síťově ovládaný e-ink IoT fotoaparát postavený na Raspberry Pi Zero. Technická dokumentace bude obsahovat popis funkce zařízení a výrobní dokumentaci (schéma zapojení, výkresy plošných spojů, osazovací plán a rozpisku materiálu). V příloze uvede fotodokumentaci zařízení a návod k použití zařízení.“</p></div>
+    <div class="card"><h3 style="margin-top:0">Jak to funguje</h3><ol class="tight">
+      <li><b>Spoušť:</b> kovové tlačítko nebo tlačítko na webu v mobilu</li>
+      <li><b>Snímek:</b> Camera Module 3, 12 MPx, HDR, autofokus</li>
+      <li><b>Zpracování:</b> ořez 600×400, úprava barev, dithering (Floyd–Steinberg) do 6 barev</li>
+      <li><b>Displej:</b> e-ink Spectra 6, překreslení ~20 s, pak obraz drží bez energie</li>
+      <li><b>Síť:</b> web <code>http://reframe.local</code>, živý hledáček, galerie, stav baterie; mimo domov vlastní Wi-Fi hotspot</li></ol></div>
+  </div>
+  <div class="flow">
+    <div><b>🔘 Tlačítko</b><span>PiSugar 3 / web</span></div><i>→</i><div><b>📷 Kamera</b><span>IMX708, HDR</span></div><i>→</i><div><b>🐍 Python</b><span>Pillow, NumPy</span></div><i>→</i><div><b>🎨 Dithering</b><span>6 barev</span></div><i>→</i><div><b>🖼️ E-ink</b><span>SPI, 0 mW v klidu</span></div><i>→</i><div><b>📱 Web</b><span>FastAPI, Wi-Fi</span></div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><b>Proč e-ink?</b><br>Bistabilní displej: po vykreslení nespotřebovává energii, takže se z fotoaparátu stává fotorámeček. Pomalé překreslení zároveň vrací focení „pomalý“ a hmatatelný charakter.</div>
+    <div class="card"><b>Co je vlastní práce</b><br>THT DPS (napájení, RC filtr spouště, LED), úprava šasi pro 16mm tlačítko, celý software (backend, REST API, web), síťová konfigurace (systemd, mDNS, hotspot), dokumentace.</div>
+    <div class="card"><b>Co je převzato</b><br>Koncept a 3D modely z open-source projektu reFrame (K. Kolev, CC BY 4.0) a ovladač displeje Waveshare. Vše je uvedeno v záložce Zdroje.</div>
+  </div>
+</section>
+
+<section class="tab" id="t-tasks">
+  <h1>Plán & všechny úkoly</h1>
+  <p class="sub">Stav se načítá ze souboru <code>data/stav.json</code> v repozitáři. Co je tam, vidí i vedoucí práce.</p>
+  <div class="card row" style="justify-content:space-between">
+    <div class="row"><span class="small">Kdo:</span><select id="fOwner" onchange="renderTasks()"><option value="">všichni</option><option>Tomáš</option><option>Claude</option><option>Ing. Mikoláš</option><option>kamarád</option></select>
+      <span class="small">Oblast:</span><select id="fArea" onchange="renderTasks()"><option value="">všechny</option></select>
+      <span class="small">Fáze:</span><select id="fPhase" onchange="renderTasks()"><option value="">všechny</option></select></div>
+    <div class="row"><label class="small"><input type="checkbox" id="editMode" onchange="renderTasks()"> režim úprav</label><button class="btn sm gh" onclick="exportStav()">⬇ stav.json</button></div>
+  </div>
+  <div id="editHint" class="alert b" style="display:none"><b class="t">Režim úprav</b>Klikáním na stav (📋 → ⏳ → ✅) měníš úkoly jen ve svém prohlížeči. Aby je viděl i učitel, stáhni <b>stav.json</b> a nahraj ho na GitHub do složky <code>data/</code> (nebo napiš Claudovi, ať to udělá).</div>
+  <div class="kan" id="kanban"></div>
+</section>
+
+<section class="tab" id="t-me">
+  <h1>Moje úkoly – Tomáš</h1>
+  <p class="sub">Co je teď na mně, seřazené podle fáze. Zobrazují se i společné úkoly s Claudem.</p>
+  <div id="meNext" class="alert g"></div>
+  <div id="meList"></div>
+</section>
+
+<section class="tab" id="t-claude">
+  <h1>Vývoj – Claude</h1>
+  <p class="sub">Co AI asistent připravil, co je rozpracované a co čeká na podklady od Tomáše.</p>
+  <div id="clList"></div>
+  <h2>Vytvořené soubory</h2>
+  <table>
+    <tr><th>Soubor</th><th>Popis</th><th>Datum</th></tr>
+    <tr><td class="mono">index.html</td><td>toto projektové centrum (GitHub Pages)</td><td>16. 11. 2026</td></tr>
+    <tr><td class="mono">hardware/3d/1_enclosure_btn16.stl</td><td>šasi s otvorem Ø16,2 mm a vybráním pod matici</td><td>16. 11. 2026</td></tr>
+    <tr><td class="mono">hardware/3d/0_TEST_kupon_tlacitko.stl</td><td>zkušební kus stěny</td><td>16. 11. 2026</td></tr>
+    <tr><td class="mono">hardware/3d/reframe_button_16mm.py</td><td>parametrický skript úpravy (trimesh + manifold3d)</td><td>16. 11. 2026</td></tr>
+    <tr><td class="mono">software/</td><td>kostra backendu, systemd, síť (k doladění na HW)</td><td>16. 11. 2026</td></tr>
+    <tr><td class="mono">CLAUDE.md, prompts/</td><td>kontext a prompty pro další práci</td><td>16. 11. 2026</td></tr>
+  </table>
+  <h2>Na co Claude čeká</h2>
+  <ul class="tight"><li>Rozměry tlačítka z posuvky (hlava, matice, délka těla) a výsledek zkušebního kuponu → doladění otvoru</li><li>Fotky ze suché montáže → umístění a držák DPS 32×26 mm</li><li>Rozteč děr a výška konektoru LaskaKit USB-C → případná úprava podstavce</li><li>Výsledky testu na stole (tlačítko, LED) → zápis do deníku</li></ul>
 </section>
 
 <!-- ================= AUDIT ================= -->
@@ -156,24 +254,6 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
   <div class="alert g"><b class="t">✔ Co je v pořádku</b>Netlist sedí (J1 +5V/GND; C2 mezi +5V a GND; R1 SW_RAW→BTN_TRIG; C1 BTN_TRIG→GND; R2 LED_ANODE→LED_CTRL; J3 +5V/GND/TRIG/LED). Cesty jsou jen na B.Cu bez křížení, izolační mezery v pořádku, 18 pokovených otvorů a 2 NPTH M2. 0,8 mm měď (35 µm) bez problému unese nabíjecí proud do ~2 A. USB-C adaptér LaskaKit má 5,1 kΩ na CC1/CC2, takže nabíjení funguje i z C-C kabelu.</div>
   <h3>Návrh revize v1.3 (jen pokud chceš „čisté“ schéma)</h3>
   <p>Aby schéma odpovídalo skutečnému zapojení: J2.1 přejmenovat na <code>BAT_SW</code> (COM tlačítka), J3 rozšířit na 5 pinů (5. pin <code>BAT</code> → pad 2 PiSugaru), u J3.4 popsat GPIO 13. Volitelně přidat Q1 BC547 + R3 4,7 kΩ pro LED z 5 V. <b>Rozhodni s panem Mikolášem</b>, jestli stačí v1.2 + opravené zapojení drátů, nebo chcete v1.3.</p>
-</section>
-
-<!-- ================= PLAN ================= -->
-<section class="tab" id="t-plan">
-  <h1>Plán & harmonogram</h1>
-  <p class="sub">Harmonogram odsouhlasený s vedoucím práce. Zaškrtávání se ukládá v tomto prohlížeči.</p>
-  <div class="card">
-    <table>
-      <tr><th>Období</th><th>Náplň (dohodnuto s Ing. Mikolášem)</th><th>Stav</th></tr>
-      <tr><td><b>do konce listopadu</b></td><td>Zadání, výběr HW, návrh vlastní DPS v KiCadu, úprava 3D modelu, objednávka dílů</td><td><span class="pill wait">probíhá</span></td></tr>
-      <tr><td><b>Prosinec</b></td><td>3D tisk šasi (16mm tlačítko), výroba a osazení THT DPS, kompletace HW, testovací kód (kamera, displej, tlačítko, baterie)</td><td><span class="pill todo">čeká</span></td></tr>
-      <tr><td><b>Leden – Únor</b></td><td>Software: headless Linux, systemd, Python backend, REST API, dithering, I2C/PiSugar, webové rozhraní s živým náhledem, mDNS, hotspot</td><td><span class="pill todo">čeká</span></td></tr>
-      <tr><td><b>Březen</b></td><td>Textová dokumentace, export výkresů z KiCadu, fotodokumentace, návod k použití, příprava obhajoby</td><td><span class="pill todo">čeká</span></td></tr>
-    </table>
-    <p class="small">Povinné výstupy podle zadání: popis funkce · schéma zapojení · výkres plošných spojů · osazovací plán · rozpiska materiálu · fotodokumentace (příloha) · návod k použití (příloha).</p>
-  </div>
-  <div class="row"><span class="small" id="planStat"></span><button class="btn sm gh" onclick="resetPlan()">Obnovit výchozí stav</button></div>
-  <div class="kan" id="kanban"></div>
 </section>
 
 <!-- ================= LOG ================= -->
@@ -805,7 +885,9 @@ rozměr), řekni to a navrhni, jak to ověřit. Nevymýšlej si souřadnice ani 
   plošných spojů, osazovací plán a rozpisku materiálu). V příloze uvede fotodokumentaci zařízení a návod k použití.“
 - Předloha: reFrame – Kaloyan Kolev, https://github.com/kaloyaan/reframe (NE ocluf/reframe), https://reframe.camera
 - Harmonogram: listopad příprava | prosinec HW (tisk, DPS, kompletace, testy) | leden–únor SW | březen dokumentace + obhajoba
-- Projektové centrum (stav, deník, plán): reframe_projektove_centrum.html, složka C:\Users\tomas\Desktop\AP
+- Repozitář: https://github.com/slimaksmazeny/GSTfotak (web: https://slimaksmazeny.github.io/GSTfotak/)
+  index.html = projektové centrum; stav úkolů v data/stav.json (pole tasks: [oblast A–I, fáze nov/dec/sw/mar, stav done/wait/todo, kdo, název]),
+  deník v data/denik.json ({d,w,s,t,x}). Po každém kroku aktualizuj stav.json + deník a commitni. Lokální složka: C:\Users\tomas\Desktop\AP
 
 ## Hardware
 - MÁM: Raspberry Pi Zero 2 WH (napájená 40pin lišta; LED drát na pin 33 pájet na kolík/zespodu); Waveshare 4&quot; e-Paper HAT+ (E) Spectra 6 (600x400, 6 barev, SPI; piny RST=BCM17,
@@ -957,7 +1039,7 @@ Uveď, co je nutné ověřit na skutečném HW.
 
 <script>
 /* ---------------- navigace ---------------- */
-function go(t){document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav.side button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));window.scrollTo(0,0);if(t==='chassis')init3D();if(t==='dashboard'){const id=dither();const e=document.getElementById('einkCv').getContext('2d');if(!shots.length)e.putImageData(id,0,0)}try{location.hash=t}catch(e){}}
+function go(t){const nb=document.querySelector(`nav.side button[data-t="${t}"]`);if(nb){let g=nb.previousElementSibling;while(g&&!g.classList.contains('grp'))g=g.previousElementSibling;document.getElementById('crumb').textContent=g?g.textContent.replace(/^\S+\s/,''):'';document.getElementById('ttl').textContent=nb.childNodes[0].textContent}if(t==='tasks')renderTasks();document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav.side button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));window.scrollTo(0,0);if(t==='chassis')init3D();if(t==='dashboard'){const id=dither();const e=document.getElementById('einkCv').getContext('2d');if(!shots.length)e.putImageData(id,0,0)}try{location.hash=t}catch(e){}}
 document.querySelectorAll('nav.side button').forEach(b=>b.onclick=()=>go(b.dataset.t));
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
 function copyEl(id){const tx=document.getElementById(id).innerText;(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>toast('Zkopírováno ✓')).catch(()=>{const a=document.createElement('textarea');a.value=tx;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();toast('Zkopírováno ✓')})}
@@ -967,45 +1049,95 @@ function exportSVG(id,name){const s=document.getElementById(id).cloneNode(true);
 function exportPNG(id,name,scale){const svg=document.getElementById(id);const vb=svg.viewBox.baseVal;const w=vb.width*scale,h=vb.height*scale;const s=svg.cloneNode(true);s.setAttribute('width',w);s.setAttribute('height',h);s.setAttribute('xmlns','http://www.w3.org/2000/svg');
  const img=new Image();img.onload=()=>{const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.fillStyle=id==='schSvg'?'#f7f5ee':'#060a10';x.fillRect(0,0,w,h);x.drawImage(img,0,0,w,h);c.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name+'.png';a.click()})};img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s.outerHTML)}
 
-/* ---------------- plán / kanban ---------------- */
-const PLAN_DEFAULT=[
- ['done','Zadání práce schváleno vedoucím (Ing. Mikoláš)','admin'],
- ['done','Hlavní moduly doma: RPi Zero 2 W, Spectra 6 HAT+, Camera Module 3, PiSugar 3','hw'],
- ['done','DPS v1.2 v KiCadu – schéma, layout, DRC 0/0, Gerbery + vrtání','dps'],
- ['done','PDF výrobní dokumentace DPS v1.2 (Gemini)','doc'],
- ['done','Audit návrhu (Claude) – nalezeny 2 kritické chyby zapojení drátů','dps'],
- ['done','Úprava šasi: otvor 16,2 mm + vybrání pod matici (STL + skript)','3d'],
- ['done','Projektové centrum HTML + aktualizované prompty','doc'],
- ['done','Rozhodnutí: DPS v1.2 beze změny, opraví se jen připojení 2 drátů; LED červená/žlutá','dps'],
- ['wait','Objednat LaskaKit (seznam v záložce Součástky): tlačítko D/E, USB-C, kabel kamery Zero, Dupont silikon, lišta, šrouby','hw'],
- ['wait','Informovat Ing. Mikoláše: deska zůstává v1.2, mění se připojení 2 drátů','admin'],
- ['wait','Opravit PDF dokumentaci (rozteč 26 mm, 0,8 mm cesty, GPIO 13, BAT, τ, repo URL)','doc'],
- ['todo','Vyrobit DPS (JLCPCB / školní výroba)','dps'],
- ['todo','Změřit tlačítko posuvkou + vytisknout zkušební kupon','3d'],
- ['todo','Ověřit uchycení LaskaKit USB-C v podstavci šasi','3d'],
- ['todo','Suchá montáž → navrhnout držák DPS 32×26 (sloupky M2, rozteč 26 mm)','3d'],
- ['todo','Tisk celého šasi (průsvitné PLA, podpěry)','3d'],
- ['todo','Osazení a pájení DPS + vodiče','hw'],
- ['todo','Bench test: tlačítko zapíná PiSugar, LED na GPIO 13, nabíjení z USB-C','hw'],
- ['todo','SD karta: RPi OS Lite 64-bit, hostname reframe, user cam, SSH','sw'],
- ['todo','Testovací skripty: kamera, displej, tlačítko, baterie (prosinec)','sw'],
- ['todo','camera_daemon.py – foto, dither, displej, LED','sw'],
- ['todo','web_app.py – REST API, MJPEG stream, galerie, stav','sw'],
- ['todo','systemd služby + Avahi reframe.local + hotspot fallback','sw'],
- ['todo','Web UI (finální verze z prototypu)','sw'],
- ['todo','Fotodokumentace, návod k použití, text práce (březen)','doc'],
- ['todo','Příprava obhajoby (prezentace, tištěný scénář)','doc']];
-function plan(){return LS.get('rf_plan',PLAN_DEFAULT)}
-function savePlan(p){LS.set('rf_plan',p);renderPlan()}
-function resetPlan(){LS.set('rf_plan',PLAN_DEFAULT);renderPlan()}
-function renderPlan(){const p=plan();const cols={done:'✅ Hotovo',wait:'⏳ Rozpracováno / čeká se',todo:'📋 Zbývá'};const el=document.getElementById('kanban');el.innerHTML='';
- for(const k in cols){const c=document.createElement('div');c.className='col';c.innerHTML='<h4>'+cols[k]+' ('+p.filter(x=>x[0]===k).length+')</h4>';
-  p.forEach((it,i)=>{if(it[0]!==k)return;const d=document.createElement('div');d.className='item'+(k==='done'?' done':'');
-   d.innerHTML=`<label><input type="checkbox" ${k==='done'?'checked':''}><span>${it[1]} <span class="pill todo">${it[2]}</span></span></label>`;
-   d.querySelector('input').onchange=e=>{const q=plan();q[i][0]=e.target.checked?'done':(q[i][0]==='done'?'todo':q[i][0]);savePlan(q)};
-   if(k==='todo'){const b=document.createElement('button');b.className='btn sm gh';b.style.marginTop='4px';b.textContent='→ rozpracovat';b.onclick=()=>{const q=plan();q[i][0]='wait';savePlan(q)};d.appendChild(b)}
-   c.appendChild(d)});el.appendChild(c)}
- const done=p.filter(x=>x[0]==='done').length;const pct=Math.round(done/p.length*100);document.getElementById('kpiProg').textContent=pct+' %';document.getElementById('planStat').textContent=`Hotovo ${done}/${p.length} úkolů (${pct} %)`}
+
+/* ---------------- úkoly: jeden zdroj pravdy (data/stav.json) ---------------- */
+const AREAS={A:'Zadání & plánování',B:'DPS (elektronika)',C:'3D šasi',D:'Nákup dílů',E:'Sestavení HW',F:'Software (backend)',G:'Síť & web',H:'Dokumentace',I:'Obhajoba'};
+const PHASES=[['nov','Listopad – příprava','2026-11-01','2026-11-30'],['dec','Prosinec – hardware','2026-12-01','2026-12-31'],['sw','Leden–Únor – software','2027-01-01','2027-02-28'],['mar','Březen – dokumentace','2027-03-01','2027-03-31']];
+let STAV={updated:'2026-11-16',tasks:[
+ ['A','nov','done','Tomáš + Ing. Mikoláš','Zadání práce schváleno'],
+ ['A','nov','done','Tomáš + Ing. Mikoláš','Harmonogram odsouhlasen'],
+ ['A','nov','done','Tomáš','Výběr HW a předlohy (reFrame)'],
+ ['A','nov','done','Claude','Projektové centrum + GitHub repozitář GSTfotak'],
+ ['A','nov','wait','Ing. Mikoláš','Informovat vedoucího: DPS v1.2 beze změny, upravené připojení 2 vodičů'],
+ ['B','nov','done','Tomáš','Schéma zapojení v KiCadu (Gemini asistence)'],
+ ['B','nov','done','Tomáš','Layout DPS v1.2, DRC 0 chyb / 0 varování'],
+ ['B','nov','done','Tomáš','Gerbery + vrtací soubory'],
+ ['B','nov','done','Claude','Kontrola návrhu (audit) – 2 opravy zapojení'],
+ ['B','nov','done','Tomáš + Claude','Rozhodnutí: DPS v1.2 zůstává'],
+ ['B','dec','todo','Tomáš','Výroba DPS (JLCPCB / škola)'],
+ ['B','dec','todo','Tomáš','Osazení a pájení DPS'],
+ ['B','dec','todo','Tomáš','Kontrola DPS multimetrem (zkraty, spoje)'],
+ ['C','nov','done','Claude','Analýza 3D modelu reFrame (rozměry, dutina)'],
+ ['C','nov','done','Claude','Otvor Ø16,2 mm + vybrání pod matici + zkušební kupon'],
+ ['C','nov','wait','kamarád','3D tisk dílů (zip s návodem předán)'],
+ ['C','dec','todo','Tomáš','Test tlačítka s maticí v kuponu + změření posuvkou'],
+ ['C','dec','todo','Claude','Doladění otvoru + držák DPS 32×26 mm'],
+ ['C','dec','todo','kamarád','Tisk finálního šasi'],
+ ['D','nov','wait','Tomáš','Objednávka LaskaKit (tlačítko, USB-C, kabel kamery, dráty, šrouby)'],
+ ['D','nov','todo','Tomáš','microSD karta 16–32 GB'],
+ ['E','dec','todo','Tomáš','Test na stole: PiSugar + tlačítko (BAT) + LED na GPIO 13'],
+ ['E','dec','todo','Tomáš','Suchá montáž v šasi, fotky pro Clauda'],
+ ['E','dec','todo','Tomáš','Kompletace fotoaparátu'],
+ ['E','dec','todo','Tomáš','První start + testovací skripty HW'],
+ ['F','nov','done','Claude','Návrh architektury softwaru'],
+ ['F','nov','done','Claude','Kostra kódu (kamera, dither, displej, LED, PiSugar, API)'],
+ ['F','dec','todo','Tomáš','Instalace RPi OS Lite + SSH'],
+ ['F','sw','todo','Tomáš + Claude','Kamera: AF, HDR, foto 12 MPx'],
+ ['F','sw','todo','Tomáš + Claude','Zpracování obrazu a dithering'],
+ ['F','sw','todo','Tomáš + Claude','E-ink displej + LED stavy'],
+ ['F','sw','todo','Tomáš + Claude','REST API (FastAPI) + galerie'],
+ ['G','nov','done','Claude','Klikací prototyp webového rozhraní'],
+ ['G','sw','todo','Tomáš + Claude','MJPEG živý hledáček'],
+ ['G','sw','todo','Tomáš + Claude','Finální web UI v mobilu'],
+ ['G','sw','todo','Tomáš','systemd služba (automatický start)'],
+ ['G','sw','todo','Tomáš','mDNS reframe.local + Wi-Fi hotspot fallback'],
+ ['H','nov','done','Tomáš','PDF výrobní dokumentace DPS v1.2'],
+ ['H','nov','wait','Tomáš + Claude','Oprava dokumentace podle auditu'],
+ ['H','mar','todo','Tomáš','Fotodokumentace zařízení'],
+ ['H','mar','todo','Tomáš','Návod k použití'],
+ ['H','mar','todo','Tomáš','Text absolventské práce'],
+ ['I','mar','todo','Tomáš','Prezentace k obhajobě'],
+ ['I','mar','todo','Tomáš','Tištěný scénář + generálka']]};
+const ST={done:'✅',wait:'⏳',todo:'📋'},STN={done:'hotovo',wait:'rozpracováno',todo:'zbývá'};
+const W={done:1,wait:.5,todo:0};
+function pct(list){return list.length?Math.round(list.reduce((s,t)=>s+W[t[2]],0)/list.length*100):0}
+function T(){return STAV.tasks}
+function owns(t,who){return t[3].includes(who)}
+function taskRow(t,i,edit){const ph=PHASES.find(p=>p[0]===t[1]);return `<div class="tk ${t[2]} ${edit?'ed':''}"><div class="st" ${edit?`onclick="cycle(${i})" title="změnit stav"`:''}>${ST[t[2]]}</div><div><div class="tt">${esc(t[4])}</div><div class="meta">${AREAS[t[0]]} · ${ph?ph[1]:''}</div></div><span class="pill ${t[2]==='done'?'ok':t[2]}">${esc(t[3])}</span></div>`}
+function cycle(i){const t=T()[i];t[2]={todo:'wait',wait:'done',done:'todo'}[t[2]];LS.set('rf_stav_local',STAV);renderAll()}
+function exportStav(){STAV.updated=new Date().toISOString().slice(0,10);download('stav.json',JSON.stringify(STAV,null,1),'application/json')}
+function renderTasks(){const fo=document.getElementById('fOwner').value,fa=document.getElementById('fArea').value,fp=document.getElementById('fPhase').value,ed=document.getElementById('editMode').checked;
+ document.getElementById('editHint').style.display=ed?'block':'none';
+ const cols={todo:'📋 Zbývá',wait:'⏳ Rozpracováno / čeká se',done:'✅ Hotovo'};let h='';
+ for(const k in cols){const items=T().map((t,i)=>[t,i]).filter(([t])=>t[2]===k&&(!fo||owns(t,fo))&&(!fa||t[0]===fa)&&(!fp||t[1]===fp));
+  h+=`<div class="col"><h4>${cols[k]} (${items.length})</h4>${items.map(([t,i])=>taskRow(t,i,ed)).join('')}</div>`}
+ document.getElementById('kanban').innerHTML=h}
+function renderOwner(el,who){let h='';for(const a in AREAS){const items=T().map((t,i)=>[t,i]).filter(([t])=>t[0]===a&&owns(t,who));if(!items.length)continue;
+  const p=pct(items.map(x=>x[0]));h+=`<div class="areahead"><h3>${AREAS[a]}</h3><span class="mono small">${p} %</span></div><div class="bar"><i style="width:${p}%"></i></div>`+items.sort((x,y)=>({wait:0,todo:1,done:2}[x[0][2]]-{wait:0,todo:1,done:2}[y[0][2]])).map(([t,i])=>taskRow(t,i,false)).join('')}
+ document.getElementById(el).innerHTML=h}
+function renderTeacher(){const all=T(),p=pct(all);
+ document.getElementById('ringPct').textContent=p+' %';document.getElementById('ringArc').style.strokeDashoffset=314*(1-p/100);
+ document.getElementById('navPct').textContent=p+' % hotovo';document.getElementById('navBar').style.width=p+'%';
+ ['done','wait','todo'].forEach(k=>document.getElementById('cnt'+k[0].toUpperCase()+k.slice(1)).textContent=`${ST[k]} ${all.filter(t=>t[2]===k).length} ${STN[k]}`);
+ const now=new Date();const cur=PHASES.find(ph=>now>=new Date(ph[2])&&now<=new Date(ph[3]+'T23:59'))||PHASES[0];document.getElementById('phaseNow').textContent='Aktuální fáze: '+cur[1];
+ document.getElementById('upd').textContent='Stav k '+new Date(STAV.updated).toLocaleDateString('cs-CZ');
+ document.getElementById('areas').innerHTML=Object.keys(AREAS).map(a=>{const l=all.filter(t=>t[0]===a),q=pct(l);return `<div class="area" onclick="document.getElementById('fArea').value='${a}';go('tasks')"><div class="h"><b>${AREAS[a]}</b><span style="color:${q>=100?'#4ade80':q>0?'#a7f3d0':'#64748b'}">${q} %</span></div><div class="bar"><i style="width:${q}%"></i></div><div class="s">✅ ${l.filter(t=>t[2]==='done').length} · ⏳ ${l.filter(t=>t[2]==='wait').length} · 📋 ${l.filter(t=>t[2]==='todo').length}</div></div>`}).join('');
+ // gantt
+ const s0=new Date('2026-11-01'),s1=new Date('2027-04-01'),span=s1-s0,x=d=>Math.max(0,Math.min(100,(new Date(d)-s0)/span*100));
+ let g=`<div></div><div class="months"><span>lis</span><span>pro</span><span>led</span><span>úno</span><span>bře</span></div>`;
+ PHASES.forEach(ph=>{const l=all.filter(t=>t[1]===ph[0]),q=pct(l),a=x(ph[2]),b=x(ph[3]+'T23:59');g+=`<div class="lab">${ph[1]}</div><div class="track"><div class="seg" style="left:${a}%;width:${b-a}%"><i style="width:${q}%"></i><span>${q} %</span></div>${now>=s0&&now<=s1?`<div class="today" style="left:${x(now)}%"></div>`:''}</div>`});
+ document.getElementById('gantt').innerHTML=g;
+ const D=[['Popis funkce zařízení','H',['Text absolventské práce']],['Schéma zapojení','B',['Schéma zapojení v KiCadu (Gemini asistence)']],['Výkres plošných spojů','B',['Layout DPS v1.2, DRC 0 chyb / 0 varování']],['Osazovací plán','B',['PDF výrobní dokumentace DPS v1.2']],['Rozpiska materiálu (BOM)','B',['PDF výrobní dokumentace DPS v1.2']],['Funkční zařízení','E',['Kompletace fotoaparátu','REST API (FastAPI) + galerie']],['Fotodokumentace (příloha)','H',['Fotodokumentace zařízení']],['Návod k použití (příloha)','H',['Návod k použití']]];
+ document.getElementById('deliv').innerHTML='<tr><th>Výstup</th><th>Stav</th></tr>'+D.map(d=>{const l=all.filter(t=>d[2].includes(t[4])),q=pct(l);const k=q>=100?'done':q>0?'wait':'todo';return `<tr><td>${d[0]}</td><td><span class="pill ${k==='done'?'ok':k}">${ST[k]} ${k==='done'?'hotovo (v1.2)':STN[k]}</span></td></tr>`}).join('');
+ document.getElementById('lastLog').innerHTML=logs().slice(-3).reverse().map(l=>`<div class="tl" style="margin:0 0 10px"><div class="d">${l.d}</div><b>${esc(l.t)}</b> <span class="who">— ${esc(l.w)}</span></div>`).join('');
+ // nav badges
+ document.querySelectorAll('nav.side button[data-a]').forEach(b=>{const q=pct(all.filter(t=>t[0]===b.dataset.a));let n=b.querySelector('.nb');if(!n){n=document.createElement('span');n.className='nb';b.appendChild(n)}n.textContent=q+'%'})}
+function renderMe(){renderOwner('meList','Tomáš');const PO=['nov','dec','sw','mar'];const nx=T().filter(t=>owns(t,'Tomáš')&&t[2]!=='done').sort((a,b)=>(a[2]==='wait'?0:1)-(b[2]==='wait'?0:1)||PO.indexOf(a[1])-PO.indexOf(b[1])).slice(0,4);document.getElementById('meNext').innerHTML='<b class="t">Na řadě</b>'+nx.map(t=>'• '+esc(t[4])).join('<br>')}
+function renderAll(){renderTeacher();renderTasks();renderMe();renderOwner('clList','Claude')}
+(function(){const fa=document.getElementById('fArea');for(const a in AREAS)fa.innerHTML+=`<option value="${a}">${AREAS[a]}</option>`;const fp=document.getElementById('fPhase');PHASES.forEach(p=>fp.innerHTML+=`<option value="${p[0]}">${p[1]}</option>`)})();
+const loc=LS.get('rf_stav_local',null);if(loc&&loc.tasks)STAV=loc;
+if(location.protocol!=='file:')fetch('data/stav.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.tasks&&!LS.get('rf_stav_local',null)){STAV=j;renderAll()}}).catch(()=>{});
+if(location.protocol!=='file:')fetch('data/denik.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(Array.isArray(j)){LOG_REMOTE=j;renderLog();renderTeacher()}}).catch(()=>{});
 
 /* ---------------- deník ---------------- */
 const LOG_DEFAULT=[
@@ -1015,8 +1147,11 @@ const LOG_DEFAULT=[
  {d:'16. 11. 2026',w:'Claude',s:'info',t:'Převzetí projektu + audit',x:'Prostudovány všechny soubory. Nalezeno: GPIO17 = RST displeje → LED na GPIO13; tlačítko PiSugaru spíná pad 10 s BAT (ne GND) → COM drátem na pad 2. DPS v1.2 se předělávat nemusí. Další body: jas LED, τ debounce, nesoulady v PDF.'},
  {d:'16. 11. 2026',w:'Claude',s:'ok',t:'Šasi: otvor 16,2 mm hotový',x:'Změřena geometrie enclosure.stl (otvor Ø12,2 na X14/Z17, stěna 3,5 mm, dutina 19,2 mm). Vyříznut Ø16,2 + 2mm vybrání pod matici v desce displeje. Výstup vodotěsný. Vytvořen zkušební kupon. Čeká na ověření tiskem a změření matice.'},
  {d:'16. 11. 2026',w:'Tomáš + Claude',s:'ok',t:'Rozhodnutí: DPS v1.2 zůstává',x:'LED je jen vizuální prvek, desku nepředěláváme. Koupí se tlačítko s červenou nebo žlutou LED (nižší UF). Kdyby svítila slabě, R2 se vymění za 100 Ω. Opraví se jen připojení: COM → BAT (pad 2), LED_CTRL → GPIO13 (pin 33). Pi je verze Zero 2 WH. Doplněn nákupní seznam s odkazy (vč. kabelu kamery pro Zero).'},
+ {d:'16. 11. 2026',w:'Tomáš + Claude',s:'ok',t:'GitHub repozitář GSTfotak + web',x:'Založen veřejný repozitář github.com/slimaksmazeny/GSTfotak (KiCad, Gerbery, PDF, STL, software, prompty). Projektové centrum v2: sekce pro učitele s % postupu podle oblastí a harmonogramem, úkoly Tomáš / Claude, připomínky přes GitHub Issues.'},
+ {d:'16. 11. 2026',w:'Tomáš',s:'info',t:'3D tisk zadán kamarádovi',x:'Předán zip s 5 STL díly a návodem k tisku (PLA, podpěry u těla). Nejdřív zkušební kupon.'},
  {d:'16. 11. 2026',w:'Claude',s:'ok',t:'Projektové centrum HTML',x:'Nové HTML: stav, audit, plán, deník, BOM, DPS z KiCad souřadnic, opravené zapojení, 3D prohlížeč, návod, software, prototyp webu, prompty, zdroje.'}];
-function logs(){return LOG_DEFAULT.concat(LS.get('rf_log',[]))}
+let LOG_REMOTE=[];
+function logs(){return LOG_DEFAULT.concat(LOG_REMOTE,LS.get('rf_log',[]))}
 function renderLog(){const ic={ok:'✓',wait:'…',bad:'✗',info:'ℹ'};document.getElementById('timeline').innerHTML=logs().slice().reverse().map((l,i)=>`<div class="tl"><div class="d">${l.d} <span class="pill ${l.s}">${ic[l.s]||''} ${l.s}</span></div><b>${esc(l.t)}</b> <span class="who">— ${esc(l.w)}</span><div>${esc(l.x)}</div></div>`).join('')}
 function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
 function addLog(){const t=document.getElementById('logTitle').value.trim();if(!t){toast('Doplň nadpis');return}const a=LS.get('rf_log',[]);a.push({d:document.getElementById('logDate').value||new Date().toLocaleDateString('cs-CZ'),w:document.getElementById('logWho').value,s:document.getElementById('logState').value,t,x:document.getElementById('logText').value});LS.set('rf_log',a);document.getElementById('logTitle').value='';document.getElementById('logText').value='';renderLog();toast('Uloženo ✓')}
@@ -1199,7 +1334,7 @@ function init3D(){if(v3done)return;v3done=true;const el=document.getElementById(
  cv.onwheel=e=>{e.preventDefault();zoom*=e.deltaY<0?1.12:1/1.12;requestAnimationFrame(draw)};addEventListener('resize',draw);draw()}
 
 /* ---------------- init ---------------- */
-renderPlan();renderLog();drawPCB();renderSteps();requestAnimationFrame(live);
+renderLog();renderAll();drawPCB();renderSteps();requestAnimationFrame(live);
 const h=(location.hash||'').slice(1);if(h&&document.getElementById('t-'+h))go(h);
 </script>
 </body>

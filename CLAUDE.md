@@ -12,7 +12,9 @@ rozměr), řekni to a navrhni, jak to ověřit. Nevymýšlej si souřadnice ani 
   plošných spojů, osazovací plán a rozpisku materiálu). V příloze uvede fotodokumentaci zařízení a návod k použití.“
 - Předloha: reFrame – Kaloyan Kolev, https://github.com/kaloyaan/reframe (NE ocluf/reframe), https://reframe.camera
 - Harmonogram: listopad příprava | prosinec HW (tisk, DPS, kompletace, testy) | leden–únor SW | březen dokumentace + obhajoba
-- Projektové centrum (stav, deník, plán): reframe_projektove_centrum.html, složka C:\Users\tomas\Desktop\AP
+- Repozitář: https://github.com/slimaksmazeny/GSTfotak (web: https://slimaksmazeny.github.io/GSTfotak/)
+  index.html = projektové centrum; stav úkolů v data/stav.json (pole tasks: [oblast A–I, fáze nov/dec/sw/mar, stav done/wait/todo, kdo, název]),
+  deník v data/denik.json ({d,w,s,t,x}). Po každém kroku aktualizuj stav.json + deník a commitni. Lokální složka: C:\Users\tomas\Desktop\AP
 
 ## Hardware
 - MÁM: Raspberry Pi Zero 2 WH (napájená 40pin lišta; LED drát na pin 33 pájet na kolík/zespodu); Waveshare 4" e-Paper HAT+ (E) Spectra 6 (600x400, 6 barev, SPI; piny RST=BCM17,
