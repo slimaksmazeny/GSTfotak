@@ -1077,7 +1077,7 @@ Uveď, co je nutné ověřit na skutečném HW.
 
 <script>
 /* ---------------- navigace ---------------- */
-function go(t){const nb=document.querySelector(`nav.side button[data-t="${t}"]`);if(nb){let g=nb.previousElementSibling;while(g&&!g.classList.contains('grp'))g=g.previousElementSibling;document.getElementById('crumb').textContent=g?g.textContent.replace(/^\S+\s/,''):'';document.getElementById('ttl').textContent=nb.childNodes[0].textContent;document.getElementById('mCrumb').textContent=document.getElementById('crumb').textContent;document.getElementById('mTtl').textContent=nb.childNodes[0].textContent}document.body.classList.remove('navopen');document.querySelectorAll('#mnav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));if(t==='tasks')renderTasks();document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav.side button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));window.scrollTo(0,0);if(t==='chassis')init3D();if(t==='dashboard'){const id=dither();const e=document.getElementById('einkCv').getContext('2d');if(!shots.length)e.putImageData(id,0,0)}try{location.hash=t}catch(e){}}
+function go(t,fromHash){const nb=document.querySelector(`nav.side button[data-t="${t}"]`);if(nb){let g=nb.previousElementSibling;while(g&&!g.classList.contains('grp'))g=g.previousElementSibling;document.getElementById('crumb').textContent=g?g.textContent.replace(/^\S+\s/,''):'';document.getElementById('ttl').textContent=nb.childNodes[0].textContent;document.getElementById('mCrumb').textContent=document.getElementById('crumb').textContent;document.getElementById('mTtl').textContent=nb.childNodes[0].textContent}document.body.classList.remove('navopen');document.querySelectorAll('#mnav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));if(t==='tasks')renderTasks();document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav.side button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));window.scrollTo(0,0);if(t==='chassis')init3D();if(t==='dashboard'){const id=dither();const e=document.getElementById('einkCv').getContext('2d');if(!shots.length)e.putImageData(id,0,0)}if(!fromHash&&location.hash.slice(1)!==t){try{location.hash=t}catch(e){}}}
 document.querySelectorAll('nav.side button').forEach(b=>b.onclick=()=>go(b.dataset.t));document.querySelectorAll('#mnav button').forEach(b=>b.onclick=()=>b.dataset.m?document.body.classList.toggle('navopen'):go(b.dataset.t));
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
 function copyEl(id){const tx=document.getElementById(id).innerText;(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>toast('Zkopírováno ✓')).catch(()=>{const a=document.createElement('textarea');a.value=tx;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();toast('Zkopírováno ✓')})}
@@ -1373,7 +1373,8 @@ function init3D(){if(v3done)return;v3done=true;const el=document.getElementById(
 
 /* ---------------- init ---------------- */
 renderLog();renderAll();drawPCB();renderSteps();requestAnimationFrame(live);
-const h=(location.hash||'').slice(1);if(h&&document.getElementById('t-'+h))go(h);
+const h=(location.hash||'').slice(1);if(h&&document.getElementById('t-'+h))go(h,true);
+addEventListener('hashchange',()=>{const k=(location.hash||'').slice(1)||'teacher';if(document.getElementById('t-'+k))go(k,true)});
 </script>
 </body>
 </html>
