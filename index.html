@@ -2,7 +2,8 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d131f">
 <title>GSTfotak – projektové centrum | e-ink IoT fotoaparát · Tomáš Paul 23A</title>
 <style>
 :root{--bg:#0b0f17;--bg2:#111827;--bg3:#1a2233;--line:#263045;--tx:#e5e7eb;--mut:#94a3b8;--acc:#34d399;--acc2:#22d3ee;
@@ -99,11 +100,48 @@ ul.tight,ol.tight{margin:4px 0;padding-left:20px}ul.tight li,ol.tight li{margin:
 .tk .st{cursor:default;font-size:15px;line-height:1.2}.tk.ed .st{cursor:pointer}.tk .meta{font-size:11px;color:var(--mut);margin-top:2px}.tk.done .tt{color:#94a3b8;text-decoration:line-through}
 .areahead{display:flex;justify-content:space-between;align-items:center;margin:18px 0 4px}.areahead h3{margin:0}
 
-@media(max-width:900px){.app{display:block}nav.side{position:static;width:auto;height:auto;display:flex;flex-wrap:wrap;gap:4px}nav.side .grp,.brand{display:none}nav.side button{width:auto}main{padding:14px}}
+.mbar,.mnav,.scrim{display:none}
+@media(max-width:900px){
+ html,body{font-size:14.5px}
+ .app{display:block}
+ .mbar{display:flex;position:sticky;top:0;z-index:50;align-items:center;gap:10px;padding:10px 12px;background:rgba(13,19,31,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+ .mbar .logo{width:34px;height:34px;font-size:12px;border-radius:9px}.mbar .mt{flex:1;min-width:0}.mbar .mt small{display:block;font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+ .mbar .mt b{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mbar .mp{font:700 12px var(--mono);color:#a7f3d0;background:#0f2a22;border-radius:99px;padding:3px 8px}
+ .hamb{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--bg3);color:var(--tx);font-size:20px;cursor:pointer}
+ nav.side{position:fixed;top:0;left:0;bottom:0;width:84vw;max-width:320px;height:100vh;z-index:70;transform:translateX(-105%);transition:transform .25s ease;display:block;box-shadow:0 0 40px #000a;padding-bottom:90px}
+ body.navopen nav.side{transform:none}
+ nav.side .grp,nav.side .brand{display:flex}nav.side .grp{display:block}nav.side button{width:100%;padding:11px 12px;font-size:15px}
+ .scrim{position:fixed;inset:0;background:#0009;z-index:60}body.navopen .scrim{display:block}
+ main{padding:14px 12px 90px;max-width:none}
+ .topbar{display:none}
+ .mnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:55;background:rgba(13,19,31,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+ .mnav button{flex:1;background:none;border:0;color:var(--mut);font-size:10.5px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;cursor:pointer}.mnav button i{font-style:normal;font-size:19px}.mnav button.on{color:#6ee7b7}
+ h1{font-size:20px}h2{font-size:17px;margin:20px 0 8px}
+ .grid.g2,.grid.g3,.grid.g4{grid-template-columns:1fr}.grid.g4{grid-template-columns:1fr 1fr}
+ .card{padding:12px 13px;border-radius:12px}
+ .hero{padding:14px;gap:12px;border-radius:14px}.hero .ring{width:86px;height:86px}.ringv b{font-size:20px}.hero h1{font-size:18px}.hero p{font-size:13.5px}
+ .areas{grid-template-columns:1fr 1fr;gap:8px}.area{padding:10px}.area .h{flex-direction:column;gap:2px}.area .h b{font-size:12.5px}.area .h span{font-size:13px}.area .s{font-size:10.5px}
+ .gantt{grid-template-columns:78px 1fr;gap:6px}.gantt .lab{font-size:11px;line-height:1.2}.gantt .seg{font-size:10px;padding:0 4px}
+ table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:12.5px}th,td{padding:6px;white-space:normal;min-width:70px}
+ pre.code{font-size:11px;max-height:340px}
+ .kan{grid-template-columns:1fr}.tk{grid-template-columns:24px 1fr;font-size:13px}.tk .pill{grid-column:2;justify-self:start}
+ .codehead{flex-wrap:wrap}.row{gap:6px}
+ .svgbox{padding:6px}#viewer3d{height:320px}
+ .phone{border-width:6px;border-radius:26px;padding:6px}.phone .scr{min-height:auto}
+ .step{grid-template-columns:34px 1fr;padding:10px}.step .n{width:32px;height:32px}
+ .gpio{font-size:10px;grid-template-columns:1fr 26px 26px 1fr}.gpio .p{width:24px}
+ .flow{gap:4px}.flow div{padding:6px 8px;font-size:12px}
+ .links a{font-size:13px}
+ .timeline{margin-left:4px;padding-left:14px}.tl:before{left:-21px}
+ #t-tasks .card.row{flex-direction:column;align-items:stretch}#t-tasks .card.row>.row:first-child{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}#t-tasks .card.row>.row:first-child>span{display:none}#t-tasks select{width:100%;font-size:12px;padding:6px 4px}
+}
 @media print{nav.side{display:none}section.tab{display:block!important;page-break-after:always}}
 </style>
 </head>
 <body>
+<div class="mbar"><button class="hamb" onclick="document.body.classList.toggle('navopen')" aria-label="Menu">☰</button><div class="logo">GST</div><div class="mt"><small id="mCrumb">Pro učitele</small><b id="mTtl">Přehled pro vedoucího</b></div><span class="mp" id="mPct">–</span></div>
+<div class="scrim" onclick="document.body.classList.remove('navopen')"></div>
+<div class="mnav" id="mnav"><button data-t="teacher" class="on"><i>🎓</i>Přehled</button><button data-t="tasks"><i>✅</i>Úkoly</button><button data-t="pcb"><i>🟩</i>DPS</button><button data-t="log"><i>📝</i>Deník</button><button data-m="1"><i>☰</i>Menu</button></div>
 <div class="app">
 <nav class="side" id="nav">
   <div class="brand"><div class="logo">GST</div><div><b>GSTfotak</b><small>e-ink IoT fotoaparát · T. Paul 23A</small></div></div>
@@ -1039,8 +1077,8 @@ Uveď, co je nutné ověřit na skutečném HW.
 
 <script>
 /* ---------------- navigace ---------------- */
-function go(t){const nb=document.querySelector(`nav.side button[data-t="${t}"]`);if(nb){let g=nb.previousElementSibling;while(g&&!g.classList.contains('grp'))g=g.previousElementSibling;document.getElementById('crumb').textContent=g?g.textContent.replace(/^\S+\s/,''):'';document.getElementById('ttl').textContent=nb.childNodes[0].textContent}if(t==='tasks')renderTasks();document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav.side button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));window.scrollTo(0,0);if(t==='chassis')init3D();if(t==='dashboard'){const id=dither();const e=document.getElementById('einkCv').getContext('2d');if(!shots.length)e.putImageData(id,0,0)}try{location.hash=t}catch(e){}}
-document.querySelectorAll('nav.side button').forEach(b=>b.onclick=()=>go(b.dataset.t));
+function go(t){const nb=document.querySelector(`nav.side button[data-t="${t}"]`);if(nb){let g=nb.previousElementSibling;while(g&&!g.classList.contains('grp'))g=g.previousElementSibling;document.getElementById('crumb').textContent=g?g.textContent.replace(/^\S+\s/,''):'';document.getElementById('ttl').textContent=nb.childNodes[0].textContent;document.getElementById('mCrumb').textContent=document.getElementById('crumb').textContent;document.getElementById('mTtl').textContent=nb.childNodes[0].textContent}document.body.classList.remove('navopen');document.querySelectorAll('#mnav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));if(t==='tasks')renderTasks();document.querySelectorAll('section.tab').forEach(s=>s.classList.toggle('on',s.id==='t-'+t));document.querySelectorAll('nav.side button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));window.scrollTo(0,0);if(t==='chassis')init3D();if(t==='dashboard'){const id=dither();const e=document.getElementById('einkCv').getContext('2d');if(!shots.length)e.putImageData(id,0,0)}try{location.hash=t}catch(e){}}
+document.querySelectorAll('nav.side button').forEach(b=>b.onclick=()=>go(b.dataset.t));document.querySelectorAll('#mnav button').forEach(b=>b.onclick=()=>b.dataset.m?document.body.classList.toggle('navopen'):go(b.dataset.t));
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2200)}
 function copyEl(id){const tx=document.getElementById(id).innerText;(navigator.clipboard?navigator.clipboard.writeText(tx):Promise.reject()).then(()=>toast('Zkopírováno ✓')).catch(()=>{const a=document.createElement('textarea');a.value=tx;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();toast('Zkopírováno ✓')})}
 const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
@@ -1117,7 +1155,7 @@ function renderOwner(el,who){let h='';for(const a in AREAS){const items=T().map(
  document.getElementById(el).innerHTML=h}
 function renderTeacher(){const all=T(),p=pct(all);
  document.getElementById('ringPct').textContent=p+' %';document.getElementById('ringArc').style.strokeDashoffset=314*(1-p/100);
- document.getElementById('navPct').textContent=p+' % hotovo';document.getElementById('navBar').style.width=p+'%';
+ document.getElementById('navPct').textContent=p+' % hotovo';document.getElementById('mPct').textContent=p+' %';document.getElementById('navBar').style.width=p+'%';
  ['done','wait','todo'].forEach(k=>document.getElementById('cnt'+k[0].toUpperCase()+k.slice(1)).textContent=`${ST[k]} ${all.filter(t=>t[2]===k).length} ${STN[k]}`);
  const now=new Date();const cur=PHASES.find(ph=>now>=new Date(ph[2])&&now<=new Date(ph[3]+'T23:59'))||PHASES[0];document.getElementById('phaseNow').textContent='Aktuální fáze: '+cur[1];
  document.getElementById('upd').textContent='Stav k '+new Date(STAV.updated).toLocaleDateString('cs-CZ');
