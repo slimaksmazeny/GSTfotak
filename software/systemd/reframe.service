@@ -1,0 +1,21 @@
+[Unit]
+Description=reFrame Custom – kamera, e-ink, web API
+After=network-online.target pisugar-server.service
+Wants=network-online.target
+
+[Service]
+User=cam
+WorkingDirectory=/home/cam/reframe-custom/src
+# HDR senzoru IMX708 se musí zapnout dřív, než Picamera2 otevře kameru (postup z reFrame)
+ExecStartPre=-/usr/bin/v4l2-ctl --set-ctrl wide_dynamic_range=1 -d /dev/v4l-subdev0
+ExecStart=/home/cam/reframe-custom/.venv/bin/uvicorn app:app --host 0.0.0.0 --port 80
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+# instalace:
+#   sudo cp systemd/reframe.service /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now reframe.service
+#   journalctl -u reframe.service -f

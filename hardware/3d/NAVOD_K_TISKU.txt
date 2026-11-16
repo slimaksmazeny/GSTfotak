@@ -1,0 +1,34 @@
+reFrame e-ink fotoaparát – díly k 3D tisku (Tomáš Paul, 23A)
+=============================================================
+Rozměry jsou v mm, modely jsou už ve správné orientaci (rovná strana dole).
+
+SOUBORY
+ 0_TEST_kupon_tlacitko.stl  – malý zkušební kus stěny s otvorem Ø16,2 mm (~15 min)
+ 1_enclosure_btn16.stl      – hlavní tělo 108 × 75 × 30 mm (upravený otvor na tlačítko)
+ 2_lid.stl                  – víko (zadní kryt s kamerou), 2 mm
+ 3_bezel.stl                – rámeček displeje
+ 4_ring.stl                 – ozdobný kroužek kolem objektivu
+
+MATERIÁL
+ PLA, ideálně PRŮHLEDNÉ / čiré (originál reFrame: průsvitné PLA – prosvítají stavové LED).
+ Když čiré není, klidně jakékoli PLA. PETG jde taky, ale je náročnější na převisy.
+
+NASTAVENÍ (doporučení podle originálu reFrame)
+ - tryska 0,4 mm, vrstva 0,2 mm (kroužek a rámeček klidně 0,12–0,16 pro hezčí povrch)
+ - stěny/perimetry: 3 (kolem otvoru tlačítka ať je stěna pevná)
+ - výplň 15–20 %
+ - PODPĚRY: ZAPNOUT pro 1_enclosure (převisy uvnitř) – nejlépe stromové (tree/organic).
+   Ostatní díly podpěry nepotřebují.
+ - brim: u 0_TEST_kupon ano (je úzký a vysoký), jinak jen pokud se díly odlepují
+
+POŘADÍ
+ 1) Nejdřív (pokud to jde) jen 0_TEST_kupon – Tomáš na něm vyzkouší tlačítko s maticí.
+ 2) Potom zbytek. Pokud je to pro tebe jednodušší, vytiskni klidně všechno najednou –
+    kdyby tlačítko nesedělo, bude se přetiskovat jen 1_enclosure.
+
+POZNÁMKA K OTVORU
+ Otvor Ø16,2 mm je ve svislé stěně, horní hrana kruhu se může trochu prověsit.
+ Nevadí – začistí se pilníkem / vrtákem 16 mm. Prosím otvor NEzaplňovat podpěrami
+ natěsno (nebo je pak jde snadno vylomit).
+
+Díky moc! 🙂
